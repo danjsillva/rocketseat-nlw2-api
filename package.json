@@ -6,7 +6,9 @@
   "author": "Daniel Silva",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
+    "knex:migrate:rollback": "knex --knexfile knexfile.ts migrate:rollback"
   },
   "devDependencies": {
     "@types/koa": "^2.11.3",
@@ -17,9 +19,11 @@
   "dependencies": {
     "@types/koa-bodyparser": "^4.3.0",
     "@types/koa-cors": "^0.0.0",
+    "knex": "^0.21.3",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-cors": "^0.0.16",
-    "koa-router": "^9.1.0"
+    "koa-router": "^9.1.0",
+    "sqlite3": "^5.0.0"
   }
 }
