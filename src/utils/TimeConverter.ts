@@ -1,7 +1,7 @@
 export default {
-  hourToMinutes: (time: string) => {
-    const [hour, minutes] = time.split(":").map(Number);
+  hoursToMinutes: (time: string) => {
+    const [hours, minutes] = time.split(":").map(Number);
 
-    return hour * 60 + minutes;
+    return hours * 60 + minutes;
   },
 };

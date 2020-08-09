@@ -13,7 +13,7 @@ export default {
     const filter = ctx.request.query;
 
     if (filter.time) {
-      filter.time = TimeConverter.hourToMinutes(filter.time);
+      filter.time = TimeConverter.hoursToMinutes(filter.time);
     }
 
     ctx.body = await ClassService.list(filter);
@@ -46,8 +46,8 @@ export default {
       schedules.map((item: ScheduleInterface) => ({
         class_id: insertedClassesIds[0],
         week_day: item.week_day,
-        from: TimeConverter.hourToMinutes(item.from),
-        to: TimeConverter.hourToMinutes(item.to),
+        from: TimeConverter.hoursToMinutes(item.from),
+        to: TimeConverter.hoursToMinutes(item.to),
       }))
     );
 
