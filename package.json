@@ -1,0 +1,21 @@
+{
+  "name": "rocketseat-nlw2-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:danjsillva/rocketseat-nlw2-api.git",
+  "author": "Daniel Silva",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.3",
+    "@types/koa-router": "^7.4.1",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-router": "^9.1.0"
+  }
+}
