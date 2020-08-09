@@ -1,24 +1,18 @@
-import Router from 'koa-router'
+import Router from "koa-router";
 
-// import PointsController from './controllers/PointsController'
-// import ItemsController from './controllers/ItemsController'
+import ClassController from "./controllers/ClassController";
+import ConnectionController from "./controllers/ConnectionController";
 
-const router = new Router()
+const router = new Router();
 
-router.get('/', ctx => {
-    ctx.body = { message: `Hello World` }
-})
+router.get("/", (ctx) => {
+  ctx.body = { message: `Hello World` };
+});
 
-// router.get('/points', PointsController.index)
-// router.get('/points/:id', PointsController.show)
-// router.post('/points', PointsController.create)
-// router.put('/points/:id', PointsController.update)
-// router.delete('/points/:id', PointsController.destroy)
+router.get("/classes", ClassController.index);
+router.post("/classes", ClassController.create);
 
-// router.get('/items', ItemsController.index)
-// router.get('/items/:id', ItemsController.show)
-// router.post('/items', ItemsController.create)
-// router.put('/items/:id', ItemsController.update)
-// router.delete('/items/:id', ItemsController.destroy)
+router.get("/connections", ConnectionController.index);
+router.post("/connections", ConnectionController.create);
 
-export default router.routes()
+export default router.routes();
