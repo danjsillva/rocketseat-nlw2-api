@@ -14,7 +14,7 @@ export default {
   create: async (ctx: Context) => {
     const { user_id } = ctx.request.body;
 
-    const insertedUsersIds = await ConnectionService.insert({ user_id });
+    const insertedConnextionsIds = await ConnectionService.insert({ user_id });
 
     ctx.status = 201;
   },
